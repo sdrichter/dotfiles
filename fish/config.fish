@@ -1,3 +1,5 @@
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
@@ -41,3 +43,5 @@ end
 
 # Shortcuts
 abbr ff ff
+
+set -Ux LEDGER_FILE ~/plaintextaccounting/hledger/main.journal

@@ -9,6 +9,7 @@ return {
         "javascript",
         "json",
         "lua",
+        "ledger",
         "markdown",
         "markdown_inline",
         "python",
