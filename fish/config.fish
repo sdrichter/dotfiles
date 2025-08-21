@@ -21,6 +21,7 @@ abbr gp 'git push'
 abbr gcb 'git checkout -b'
 abbr .. 'z ..'
 abbr ... 'z ../..'
+abbr cd z
 
 # ---------------------------
 # Fancy file finder with preview
