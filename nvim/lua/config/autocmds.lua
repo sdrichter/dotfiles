@@ -8,7 +8,7 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 -- NOTE: Ensures that when exiting NeoVim, Zellij returns to normal mode
-vim.api.nvim_create_autocmd("VimLeave", {
-  pattern = "*",
-  command = "silent !zellij action switch-mode normal",
-})
+-- vim.api.nvim_create_autocmd("VimLeave", {
+--   pattern = "*",
+--   command = "silent !zellij action switch-mode normal",
+-- })

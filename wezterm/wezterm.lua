@@ -18,5 +18,19 @@ end
 config.send_composed_key_when_left_alt_is_pressed = false
 config.send_composed_key_when_right_alt_is_pressed = false
 
+-- This will completely disable the WezTerm tab bar. We don't need it since we are using zellij for multiplexing.
+config.enable_tab_bar = false
+
+config.keys = config.keys or {}
+
+-- Map Left Alt to behave as Meta
+config.keys = {
+  {
+    key="m",
+    mods="ALT",
+    action=wezterm.action.SendString("cmatrix\n"),
+  },
+}
+
 -- Finally, return the configuration to wezterm:
 return config
