@@ -1,4 +1,10 @@
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# This block initializes Homebrew by running 'brew shellenv'
+# and evaluating its output directly in the shell.
+# It's a more robust approach for this specific command.
+if command -v brew >/dev/null
+    echo "Initializing Homebrew..."
+    eval (brew shellenv)
+end
 
 starship init fish | source
 zoxide init fish | source
