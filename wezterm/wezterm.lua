@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 config.initial_cols = 120
 config.initial_rows = 25
 config.font_size = 14
-config.color_scheme = "carbonfox"
+config.color_scheme = "Kanagawa (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font Mono", {
 	weight = "Medium",
 })
