@@ -1,4 +1,5 @@
 --target=~/.config
 --dotfiles
 --ignore=.stowrc
+--ignore=fish/conf.d
 --ignore=.DS_Store
