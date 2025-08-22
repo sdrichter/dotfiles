@@ -39,6 +39,7 @@ abbr ... 'z ../..'
 # Other helpful abbreviations
 abbr c clear
 abbr nv nvim
+abbr rl 'source ~/.config/fish/**/*.fish'
 
 # ---------------------------
 # Fancy file finder with preview
@@ -64,6 +65,4 @@ function ff
         $EDITOR $file
     end
 end
-
-# Shortcuts
 abbr ff ff

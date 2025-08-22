@@ -28,40 +28,37 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      -- add any opts here
-      -- for example
       provider = "openai",
+      behaviour = {
+        auto_suggestions_provider = "openai",
+        -- enable_fastapply = true,
+      },
       providers = {
         openai = {
           model = "gpt-4o",
-          extra_request_body = {
-            temperature = 0.75,
-          },
         },
+        -- morph = {
+        --   model = "morph-v3-fast",
+        -- },
       },
-      -- behaviour = {
-      --   enable_fastapply = true,
-      -- },
-      -- providers = {
-      --   morph = {
-      --     model = "morph-v3-fast",
-      --   },
-      -- },
       rag_service = {
-        enabled = true,
+        enabled = os.getenv("AVANTE_ENABLE_RAG") == "true",
         host_mount = os.getenv("HOME"),
         runner = "docker",
         llm = {
           provider = "openai",
-          model = "gpt-4o",
+          model = "gpt-4o-mini",
         },
         embed = {
           provider = "openai",
           model = "text-embedding-3-large",
           extra = {
-            embed_batch_size = 10,
+            embed_batch_size = 100,
           },
         },
+      },
+      web_search_engine = {
+        provider = "google", -- tavily, serpapi, google, kagi, brave, or searxng
       },
     },
     dependencies = {
