@@ -20,16 +20,23 @@ set -Ux EDITOR nvim
 
 fish_vi_key_bindings
 
+# Git abbreviations
 abbr gco 'git checkout'
+abbr gcom 'git checkout main'
 abbr gs 'git status'
 abbr gl 'git pull'
 abbr gp 'git push'
 abbr gcb 'git checkout -b'
 abbr ga 'git add'
 abbr ga. 'git add .'
-abbr gcm 'git commit -m'
+abbr gc 'git commit'
+abbr gcm --set-cursor 'git commit -m "%"'
+
+# Navigation abbreviations
 abbr .. 'z ..'
 abbr ... 'z ../..'
+
+# Other helpful abbreviations
 abbr c clear
 abbr nv nvim
 
