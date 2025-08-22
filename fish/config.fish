@@ -1,8 +1,8 @@
 # Detect OS and set Homebrew path
-if test (uname) = "Darwin"
+if test (uname) = Darwin
     # macOS
     set -gx HOMEBREW_PREFIX /opt/homebrew
-else if test (uname) = "Linux"
+else if test (uname) = Linux
     # Linux (including WSL)
     set -gx HOMEBREW_PREFIX /home/linuxbrew/.linuxbrew
 end
@@ -55,5 +55,3 @@ end
 
 # Shortcuts
 abbr ff ff
-
-set -Ux LEDGER_FILE ~/plaintextaccounting/hledger/main.journal

@@ -31,6 +31,32 @@ return {
       -- add any opts here
       -- for example
       provider = "copilot",
+      -- behaviour = {
+      --   enable_fastapply = true,
+      -- },
+      -- providers = {
+      --   morph = {
+      --     model = "morph-v3-fast",
+      --   },
+      -- },
+      -- rag_service = {
+      --   enabled = true,
+      --   host_mount = os.getenv("HOME"),
+      --   runner = "docker",
+      --   llm = {
+      --     provider = "ollama",
+      --     endpoint = "http://localhost:11434",
+      --     model = "gemma3:27b-it-q4_K_M",
+      --   },
+      --   embed = {
+      --     provider = "ollama",
+      --     endpoint = "http://localhost:11434",
+      --     model = "nomic-embed-text",
+      --     extra = {
+      --       embed_batch_size = 10,
+      --     },
+      --   },
+      -- },
     },
     dependencies = {
       "nvim-lua/plenary.nvim",
