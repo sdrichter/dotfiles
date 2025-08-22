@@ -30,7 +30,15 @@ return {
     opts = {
       -- add any opts here
       -- for example
-      provider = "copilot",
+      provider = "openai",
+      providers = {
+        openai = {
+          model = "gpt-4o",
+          extra_request_body = {
+            temperature = 0.75,
+          },
+        },
+      },
       -- behaviour = {
       --   enable_fastapply = true,
       -- },
@@ -39,24 +47,22 @@ return {
       --     model = "morph-v3-fast",
       --   },
       -- },
-      -- rag_service = {
-      --   enabled = true,
-      --   host_mount = os.getenv("HOME"),
-      --   runner = "docker",
-      --   llm = {
-      --     provider = "ollama",
-      --     endpoint = "http://localhost:11434",
-      --     model = "gemma3:27b-it-q4_K_M",
-      --   },
-      --   embed = {
-      --     provider = "ollama",
-      --     endpoint = "http://localhost:11434",
-      --     model = "nomic-embed-text",
-      --     extra = {
-      --       embed_batch_size = 10,
-      --     },
-      --   },
-      -- },
+      rag_service = {
+        enabled = true,
+        host_mount = os.getenv("HOME"),
+        runner = "docker",
+        llm = {
+          provider = "openai",
+          model = "gpt-4o",
+        },
+        embed = {
+          provider = "openai",
+          model = "text-embedding-3-large",
+          extra = {
+            embed_batch_size = 10,
+          },
+        },
+      },
     },
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -65,7 +71,7 @@ return {
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       "folke/snacks.nvim", -- for input provider snacks
       "echasnovski/mini.icons",
-      "zbirenbaum/copilot.lua", -- for providers='copilot'
+      -- "zbirenbaum/copilot.lua", -- for providers=''
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",

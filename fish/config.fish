@@ -25,8 +25,13 @@ abbr gs 'git status'
 abbr gl 'git pull'
 abbr gp 'git push'
 abbr gcb 'git checkout -b'
+abbr ga 'git add'
+abbr ga. 'git add .'
+abbr gcm 'git commit -m'
 abbr .. 'z ..'
 abbr ... 'z ../..'
+abbr c clear
+abbr nv nvim
 
 # ---------------------------
 # Fancy file finder with preview
