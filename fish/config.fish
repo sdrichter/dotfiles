@@ -1,8 +1,14 @@
-# This block initializes Homebrew by running 'brew shellenv'
-# and evaluating its output directly in the shell.
-# It's a more robust approach for this specific command.
-if command -v brew >/dev/null
-    echo "Initializing Homebrew..."
+# Detect OS and set Homebrew path
+if test (uname) = "Darwin"
+    # macOS
+    set -gx HOMEBREW_PREFIX /opt/homebrew
+else if test (uname) = "Linux"
+    # Linux (including WSL)
+    set -gx HOMEBREW_PREFIX /home/linuxbrew/.linuxbrew
+end
+set -gx PATH $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin $PATH
+
+if type -q brew
     eval (brew shellenv)
 end
 
@@ -21,7 +27,6 @@ abbr gp 'git push'
 abbr gcb 'git checkout -b'
 abbr .. 'z ..'
 abbr ... 'z ../..'
-abbr cd z
 
 # ---------------------------
 # Fancy file finder with preview
