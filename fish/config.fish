@@ -7,6 +7,7 @@ else if test (uname) = Linux
     set -gx HOMEBREW_PREFIX /home/linuxbrew/.linuxbrew
 end
 set -gx PATH $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin $PATH
+set -gx PATH ~/.nix-profile/bin $PATH
 
 if type -q brew
     eval (brew shellenv)
@@ -66,3 +67,6 @@ function ff
     end
 end
 abbr ff ff
+
+# Created by `pipx` on 2025-09-01 15:19:02
+set PATH $PATH /home/scott/.local/bin
