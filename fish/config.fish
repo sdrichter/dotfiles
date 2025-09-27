@@ -8,6 +8,7 @@ else if test (uname) = Linux
 end
 set -gx PATH $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin $PATH
 set -gx PATH ~/.nix-profile/bin $PATH
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
 
 if type -q brew
     eval (brew shellenv)

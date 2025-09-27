@@ -28,37 +28,14 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      provider = "openai",
-      behaviour = {
-        auto_suggestions_provider = "openai",
-        -- enable_fastapply = true,
-      },
+      provider = "groq",
       providers = {
-        openai = {
-          model = "gpt-4o",
+        groq = {
+          __inherited_from = "openai",
+          api_key_name = "GROQ_API_KEY",
+          endpoint = "https://api.groq.com/openai/v1/",
+          model = "llama-3.3-70b-versatile",
         },
-        -- morph = {
-        --   model = "morph-v3-fast",
-        -- },
-      },
-      rag_service = {
-        enabled = os.getenv("AVANTE_ENABLE_RAG") == "true",
-        host_mount = os.getenv("HOME"),
-        runner = "docker",
-        llm = {
-          provider = "openai",
-          model = "gpt-4o-mini",
-        },
-        embed = {
-          provider = "openai",
-          model = "text-embedding-3-large",
-          extra = {
-            embed_batch_size = 100,
-          },
-        },
-      },
-      web_search_engine = {
-        provider = "google", -- tavily, serpapi, google, kagi, brave, or searxng
       },
     },
     dependencies = {
@@ -68,7 +45,7 @@ return {
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       "folke/snacks.nvim", -- for input provider snacks
       "echasnovski/mini.icons",
-      -- "zbirenbaum/copilot.lua", -- for providers=''
+      "zbirenbaum/copilot.lua", -- for providers=''
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
