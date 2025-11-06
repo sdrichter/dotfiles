@@ -42,6 +42,7 @@ abbr ... 'z ../..'
 abbr c clear
 abbr nv nvim
 abbr rl 'source ~/.config/fish/**/*.fish'
+abbr p python
 
 # ---------------------------
 # Fancy file finder with preview
