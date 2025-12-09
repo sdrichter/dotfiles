@@ -69,6 +69,3 @@ function ff
     end
 end
 abbr ff ff
-
-# Created by `pipx` on 2025-09-01 15:19:02
-set PATH $PATH /home/scott/.local/bin

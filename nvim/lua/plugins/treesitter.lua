@@ -4,7 +4,6 @@ return {
     opts = {
       ensure_installed = {
         "bash",
-        "beancount",
         "html",
         "javascript",
         "json",
