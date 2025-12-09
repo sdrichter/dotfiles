@@ -1,2 +1,8 @@
 .DS_Store
-fish/conf.d/local.fish
+fish/conf.d
+fish/completions
+fish/functions
+fish/themes
+zsh/.zsh_history
+zsh/.zcompdump
+zsh/.zsh_session

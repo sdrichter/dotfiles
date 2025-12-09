@@ -16,4 +16,6 @@ Ensure the following tools are installed:
 
 ## Install
 
+Install fisher for fish: <https://github.com/jorgebucaran/fisher>
+
 Run `stow .` in the root of this repo then restart your terminal.
