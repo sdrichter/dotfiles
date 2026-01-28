@@ -11,3 +11,19 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+# format = """
+# ...
+# ${custom.jj}\
+# ...
+# """
+#
+# #...
+#
+# [custom.jj]
+# command = "prompt"
+# format = "$output"
+# ignore_timeout = true
+# shell = ["starship-jj", "--ignore-working-copy", "starship"]
+# use_stdin = false
+# when = true

@@ -12,6 +12,10 @@ if type -q brew
     eval (brew shellenv)
 end
 
+if type -q cargo
+    set -gx PATH ~/.cargo/bin $PATH
+end
+
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
@@ -35,6 +39,9 @@ abbr gcm --set-cursor 'git commit -m "%"'
 # Navigation abbreviations
 abbr .. 'z ..'
 abbr ... 'z ../..'
+
+# Docker abbreviations
+abbr dc 'docker compose'
 
 # Other helpful abbreviations
 abbr c clear
