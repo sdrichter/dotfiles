@@ -1,0 +1,25 @@
+# Window size
+window-width = 50
+window-height = 25
+
+# Font
+font-family = FiraCode Nerd Font Mono
+font-style = Medium
+font-size = 15
+
+# Theme
+theme = Gruvbox Material Dark
+
+# Don't resize window when changing font size
+resize-overlay = never
+
+# Hide tabs (since you're using zellij)
+gtk-tabs-location = hidden
+
+# Windows-specific startup command
+# Put this in config-windows if desired
+command = /usr/bin/fish --login
+
+# Alt should behave as Meta/Esc prefix
+macos-option-as-alt = true
+
