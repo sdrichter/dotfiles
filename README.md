@@ -6,6 +6,7 @@ Ensure the following tools are installed:
 
 - Ghostty
 - Zsh Shell
+- Antidote Zsh plugin manager
 - zellij
 - neovim
 - zoxide

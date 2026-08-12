@@ -47,11 +47,6 @@ source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 antidote load
 
 # --------------------
-# Additional Configs
-# --------------------
-source "$HOME/.config/zsh/aliases.zsh"
-
-# --------------------
 # Zoxide
 # --------------------
 eval "$(zoxide init zsh)"
