@@ -1,5 +1,7 @@
---target=~/.config
+--target=~
 --dotfiles
 --ignore=.stowrc
---ignore=fish/conf.d
+--ignore=.config/fish/conf.d
 --ignore=.DS_Store
+--ignore=README.md
+--ignore=install.sh

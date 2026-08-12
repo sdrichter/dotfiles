@@ -1,0 +1,4 @@
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+olets/zsh-abbr
+olets/zsh-autosuggestions-abbreviations-strategy
