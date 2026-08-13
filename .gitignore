@@ -6,3 +6,4 @@ fish/themes
 zsh/.zsh_history
 zsh/.zcompdump
 zsh/.zsh_session
+.zshrc.local

@@ -16,7 +16,7 @@ export PATH
 # ---------------------
 # ZSH History & Opts
 # ---------------------
-HISTFILE=~/.histfile
+HISTFILE='$HOME/histfile'
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -36,7 +36,7 @@ bindkey -v
 autoload -Uz compinit
 compinit
 
-zstyle :compinstall filename '/home/scott/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 ABBR_SET_EXPANSION_CURSOR=1
 
@@ -55,3 +55,10 @@ eval "$(zoxide init zsh)"
 # Starship Prompt
 # --------------------
 eval "$(starship init zsh)"
+
+# --------------------
+# Machine-Specific Config
+# --------------------
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
+
