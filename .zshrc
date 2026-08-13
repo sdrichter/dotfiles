@@ -16,7 +16,7 @@ export PATH
 # ---------------------
 # ZSH History & Opts
 # ---------------------
-HISTFILE='$HOME/histfile'
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -36,7 +36,7 @@ bindkey -v
 autoload -Uz compinit
 compinit
 
-zstyle :compinstall filename '$HOME/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 ABBR_SET_EXPANSION_CURSOR=1
 
@@ -61,4 +61,4 @@ eval "$(starship init zsh)"
 # --------------------
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 
-
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
