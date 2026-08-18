@@ -5,7 +5,7 @@ return {
       servers = {
         pyright = {
           settings = {
-            pyright = {
+            python = {
               analysis = {
                 diagnosticMode = "openFilesOnly",
                 typeCheckingMode = "standard",
